@@ -6,7 +6,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import StratifiedShuffleSplit
 
 data=pd.read_csv('C:/Users/HP/Desktop/student and teacher/eastern/Chinese system/eastern 2 classes-qc-mi-norm.csv')
-y=data['y']
+y=data[['y']]
 x=data.drop(labels=['y'],axis=1)
 cv = StratifiedShuffleSplit(n_splits=1,test_size=0.2,random_state=1)
 
